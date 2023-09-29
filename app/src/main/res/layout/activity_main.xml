@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/backgroundimg">
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/white"
+        android:visibility="visible" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textColor="@color/my_primary"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Weather App"
+        android:gravity="center"
+        android:background="#10283D"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@id/linear_layout_weather_info"
+        android:id="@+id/image"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linear_layout_weather_info"
+        android:orientation="vertical"
+        android:layout_marginBottom="40dp"
+        android:layout_above="@id/edit_text_city">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            android:text="-- C"
+            android:paddingStart="30dp"
+            android:id="@+id/temperature"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textStyle="italic"
+            android:text="--"
+            android:paddingStart="30dp"
+            android:id="@+id/condition"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="---"
+            android:paddingStart="30dp"
+            android:id="@+id/location"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+    
+    <EditText
+        android:id="@+id/edit_text_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:hint="Enter city name"
+        android:paddingStart="30dp"
+        android:textSize="30sp"
+        android:inputType="textAutoCorrect"
+        android:layout_above="@id/search_btn"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:text="Find"
+        android:id="@+id/search_btn"
+        android:backgroundTint="#10283D"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"/>
+
+</RelativeLayout>
